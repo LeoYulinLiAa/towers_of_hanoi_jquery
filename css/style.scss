@@ -1,0 +1,74 @@
+$background-color: #e0f3f6;
+$color-primary: #203436;
+$color-secondary: #41686d;
+$color-active: #0caeb6;
+$color-selected: #db6a42;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-primary;
+  margin: 0;
+  background: $background-color;
+}
+a {
+  color: $color-primary;
+  text-decoration: underline;
+}
+a:active {
+  color: $color-secondary;
+  text-decoration: underline;
+}
+.main {
+  max-width: 768px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+  padding: 1rem;
+}
+.main h1 {
+  font-weight: 300;
+}
+.main small {
+  color: $color-secondary;
+}
+.hanoi {
+  display: flex;
+  width: 400px;
+  flex-direction: row;
+  justify-content: space-between;
+  ul {
+    margin: 0;
+    padding: 0;
+    border-bottom: 5px solid $color-primary;
+    height: 200px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    &:hover {
+      border-bottom: 5px solid $color-active;
+    }
+    &.selected {
+      border-bottom: 5px solid $color-selected;
+    }
+  li {
+    height: 35px;
+    margin: 2px;
+    background-color: $color-secondary;
+    border-radius: 20px;
+    &.disc-1 {
+      width: 50px;
+    }
+    &.disc-2 {
+      width: 75px;
+    }
+    &.disc-3 {
+      width: 100px;
+    }
+  }  
+  }
+}
